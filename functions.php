@@ -17,4 +17,21 @@ add_action("wp_enqueue_scripts","cargar_js_del_tema");
 /* ***FIN***Funciones para cargar estilo y scripts */
 
 
+//Funcionaiento de Bootsrap en Wordpreesss
 
+// Register custom navigation walker
+    require_once('wp_bootstrap_navwalker.php');
+    add_theme_support("menus");
+    add_theme_support("post-thumbnails");
+
+    function registrar_mis_menus(){
+      register_nav_menus(array(
+
+        'menu_cabecera' => 'Menu en Cabecera'
+
+      ));
+    }
+    add_action('init','registrar_mis_menus');
+
+ /*?>
+No se cierran los .php en wordpress */

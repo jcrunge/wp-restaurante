@@ -8,26 +8,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Saul Ramirez    <span class="glyphicon glyphicon-fire">  </span></a>
+      <a class="navbar-brand" href="<?php echo bloginfo('url'); ?>"><?php echo bloginfo('name'); ?> <span class="glyphicon glyphicon-fire">  </span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Inicio<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Servicio</a></li>
-         <li><a href="#">Contacto</a></li>
-         <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Platillos<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="page-2.html">Pollo Sazonado</a></li>
-                    <li><a href="#">Pescado Sellado</a></li>
-                    <li><a href="#">Carta</a></li>
-
-                  </ul>
-                </li>
-      </ul>
+      <?php /* Primary navigation */
+wp_nav_menu( array(
+  'menu' => 'top_menu',
+  'depth' => 2,
+  'container' => false,
+  'menu_class' => 'nav navbar-nav', //Aquí se modifica la clase para que funcione con bootstrap (la clase que iba en ul)
+  //Process nav menu using our custom nav walker
+  'walker' => new wp_bootstrap_navwalker())
+);
+?>
       
       <!--Lado izq del menu-->
       <ul class="nav navbar-nav navbar-right">

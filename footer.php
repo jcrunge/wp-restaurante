@@ -1,6 +1,6 @@
 <footer class="container-fluid">
         <div class="text-center">
-            <small>Derecho de Auto: <cite title="">Saul Salomon-CIDWA</cite></small>
+            <small>Derecho de Auto: <cite title=""><?php bloginfo("description") ?>-CIDWA</cite></small>
         </div>
     </footer>
     

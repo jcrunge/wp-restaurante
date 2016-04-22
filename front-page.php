@@ -5,6 +5,8 @@ the_post();
 ?>
   <?php get_template_part("partes/slider"); ?>
     
+    <h1 class="btn-default"><?php the_title(); ?></h1>
+    <h5 class="btn-default"><?php the_content(); ?></h5>
     
      <section class="container">    
     	        <div class="row">
